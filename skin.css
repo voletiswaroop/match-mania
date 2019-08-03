@@ -4,9 +4,8 @@
 }
 
 .wrapper {
-  max-width: 700px;
+  max-width: 500px;
   margin: 50px auto;
-  /* min-height: 537px; */
   border-radius: 5px;
   box-shadow: 3px 3px 5px 6px #ccc;
   display: flex;
@@ -23,7 +22,6 @@
 .game-controls span {
   padding: 0 15px 15px;
   display: inline-block;
-
 }
 
 #reset {
@@ -54,9 +52,7 @@
   background: blueviolet;
 }
 
-.item.selected:before,
-.item.notsame:before,
-.item.active:before {
+.item.selected:before, .item.notsame:before, .item.active:before {
   font-size: 25px !important;
   color: #fff;
   margin: auto;
