@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 50px auto;
+  /* min-height: 537px; */
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.game-controls {
+  max-width: 330px;
+  margin: auto;
+  text-align: center;
+}
+
+.game-controls span {
+  padding: 0 15px 15px;
+  display: inline-block;
+
+}
+
+#reset {
+  cursor: pointer;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  width: calc(92%/4);
+  list-style: none;
+  height: 115px;
+  background: #777;
+  margin: 1% 0;
+  font-size: 0 !important;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  display: flex !important;
+  transition: all 0.5s ease;
+}
+
+.item.active {
+  transform: rotateY(180deg);
+  background: blueviolet;
+}
+
+.item.selected:before,
+.item.notsame:before,
+.item.active:before {
+  font-size: 25px !important;
+  color: #fff;
+  margin: auto;
+}
+
+.item.selected {
+  background: greenyellow;
+  pointer-events: none;
+}
+
+.item.notsame {
+  transform: rotateY(180deg);
+  background: red;
+  pointer-events: none;
+}
+
+#sucess-card {
+  display: none;
+  margin: auto;
+  pointer-events: none;
+}

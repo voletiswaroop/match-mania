@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="skin.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="game-controls">
+        <span id="rating">3 Star</span>
+        <span id="moves">0 Moves</span>
+        <span id="timer">Timer</span>
+        <span id="reset" onclick=shuffleItems()> Reset</span>
+      </div>
+      <ul id="container">
+      </ul>
+      <div id="sucess-card">
+        Congratulation you have completed the Game with <span id="total-moves"></span> and <span id='final-rating'></span> star.
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
