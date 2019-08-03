@@ -14,7 +14,7 @@ This project is all about demonstrating your mastery of Javascript. You'll build
 
 ## Contributing
 
-This is a preety new Feel free to download and extend it if I miss any thing. So contributions are welcome so feel free to [open an issue](https://github.com/voletiswaroop/mind-guessing-game/issues) or fork and create a pull request. Collaborators are also welcome - please send an email to swaroop.voleti@gmail.com.
+This is a preety new project contributions are most welcome, feel free to clone it and extend the module if I miss any thing and also feel free to [open an issue](https://github.com/voletiswaroop/mind-guessing-game/issues) or fork and create a pull request. Collaborators are also welcome - please send an email to swaroop.voleti@gmail.com.
 
 ## License 
 
