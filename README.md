@@ -7,10 +7,10 @@ This project is all about demonstrating your mastery of Javascript. You'll build
 
 ## Memory Mind Game Project process
 
--- Memory Game Logic: The game randomly shuffles the items/cards. Player wins once all the cards have been successfully matched.
--- Congratulations screen: Once the player wins the game, congratulaations screen will appear with all the details.
--- Restart: It allow player to restart the game. 
--- Star Rating: The star rating will changes from 3 to 1 star based on the player number of moves.
+1. Memory Game Logic: The game randomly shuffles the items/cards. Player wins once all the cards have been successfully matched.
+2. Congratulations screen: Once the player wins the game, congratulaations screen will appear with all the details.
+3. Restart: It allow player to restart the game. 
+4. Star Rating: The star rating will changes from 3 to 1 star based on the player number of moves.
 
 ## Contributing
 
