@@ -50,6 +50,7 @@
 .item.active {
   transform: rotateY(180deg);
   background: blueviolet;
+  pointer-events: none;
 }
 
 .item.selected:before, .item.notsame:before, .item.active:before {

@@ -31,12 +31,13 @@ function selectedItem(e) {
   counter = counter + 1;
   document.getElementById('moves').innerHTML = counter + ' Moves';
   document.getElementById('total-moves').innerHTML = counter + ' Moves';
-  if (counter > 12 && counter < 19) {
+  if (counter > 16 && counter < 29) {
     finalRating = 2 + ' Stars';
-  } else if (counter > 20) {
+  } else if (counter > 30) {
     finalRating = 1 + ' Star';
   }
-  document.getElementById('rating').innerHTML, document.getElementById('final-rating').innerHTML = finalRating;
+  document.getElementById('rating').innerHTML = finalRating;
+  document.getElementById('final-rating').innerHTML = finalRating;
   if (document.getElementsByClassName('active').length < 2) { e.classList.add('active'); }
   for (let i = 0; i < itemsList.length; i++) {
     itemsList[i].classList.remove('notsame')
