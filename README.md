@@ -14,7 +14,7 @@ This project is all about demonstrating your mastery of Javascript. You'll build
 
 ## Contributing
 
-This is a preety new project contributions are most welcome, feel free to clone it and extend the module if I miss any thing and also feel free to [open an issue](https://github.com/voletiswaroop/mind-guessing-game/issues) or fork and create a pull request. Collaborators are also welcome - please send an email to swaroop.voleti@gmail.com.
+This is a pretty new project contributions are most welcome, feel free to clone it and extend the module if I miss any thing and also feel free to [open an issue](https://github.com/voletiswaroop/mind-guessing-game/issues) or fork and create a pull request. Collaborators are also welcome - please send an email to swaroop.voleti@gmail.com.
 
 ## License 
 Copyright 2019 Voleti Swaroop. This project is licensed under the terms of the [MIT license](https://github.com/voletiswaroop/mind-guessing-game/blob/master/LICENSE).
