@@ -13,7 +13,6 @@ This project is all about demonstrating your mastery of Javascript. You'll build
 4. Star Rating: The star rating will changes from 3 to 1 star based on the player number of moves.
 
 ## Contributing
-
 This is a preety new project contributions are most welcome, feel free to clone it and extend the module if I miss any thing and also feel free to [open an issue](https://github.com/voletiswaroop/mind-guessing-game/issues) or fork and create a pull request. Collaborators are also welcome - please send an email to voleti.swaroop@gmail.com.
 
 ## License 
