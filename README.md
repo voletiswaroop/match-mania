@@ -4,7 +4,7 @@ This project is all about demonstrating your mastery of Javascript. You'll build
 
 ## Demo
 
-[Click here](http://swaroopvoleti.me/mind-guessing-game/) for Match Mania JS game.
+[Click here](https://voletiswaroop.github.io/match-mania/) for Match Mania JS game.
 
 ## Memory Mind Game Project process
 
