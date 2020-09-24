@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Guessing Game</title>
-    <link rel="stylesheet" href="skin.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <section class="wrapper">
+
+<head>
+  <title>Guessing Game</title>
+  <link rel="stylesheet" href="skin.css" />
+  <script src="https://kit.fontawesome.com/1ec50ae74a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Match mania</h1>
+  </header>
+  <section class="wrapper">
+    <div class="game-wrapper">
       <div class="game-controls">
-        <span id="rating">3 Star</span>
-        <span id="moves">0 Moves</span>
-        <span id="reset" onclick=shuffleItems()> Reset</span>
+        <span id="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        <span id="moves">No Moves</span>
+        <span id="reset" onclick=shuffleItems()>Reset</span>
       </div>
       <ul id="container">
       </ul>
       <div id="sucess-card">
-        Congratulation you have completed the Game with <span id="total-moves"></span> and <span id='final-rating'></span> star.
+        Congratulation you have successfully completed the Game in <span id="total-moves"></span> with
+        <span id='final-rating'><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+        rating.
       </div>
-    </section>
-    <script src="script.js"></script>
-  </body>
+    </div>
+    <div class="game-rules">
+      <h2>Game Rules</h2>
+      <p>The Guessing cards game randomly shuffles the cards on every page refresh. Player wins once all the cards have
+        been successfully matched.</p>
+      <ul>
+        <li><b>Congratulations screen:</b> Player wins the game, congratulaations screen will appear with all
+          the details.</li>
+        <li><b>Reset:</b> Reset will restart the game</li>
+        <li><b>Star Rating:</b> The star rating will change from 3 to 1 star based on the player's number of moves.
+          <ul>
+            <li>If the player completes the game in 15 moves then the player will get 3 stars.</li>
+            <li>If the player completes the game in between 16 to 30 moves then the player will get 2 stars.</li>
+            <li>If the player completes the game in morethan 30 moves then the player will get 1 star.</li>
+        </li>
+      </ul>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    Design &amp; Developed by <a href="https://voletiswaroop.github.io/" title="Swaroop Voleti portfolio"
+      target="_blank">Swaroop Voleti</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>

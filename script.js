@@ -1,20 +1,20 @@
-//initializing items
+//initializing cards
 let items = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb', 'fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb'],
-  itemsList = document.getElementsByClassName('item'),
-  counter = 0, currentActiveItem, finalRating = 3 + ' Stars';
-//shuffle items
+  itemsList = document.getElementsByClassName('item'), counter = 0, currentActiveItem, finalRating = 3 + ' Stars';
+
+//shuffle cards
 function shuffleItems() {
   window.location.reload();
 }
 
-//Print items 
+// select number of cards in a row
 displayItems(4);
+
+//Print cards 
 function displayItems(gridSize) {
   items.sort(function () { return .5 - Math.random(); });
   let itemsContainer = document.getElementById("container");
-  if (gridSize % 2 === 0) {
-    gridSize = gridSize + .2
-  }
+  gridSize % 2 === 0 ? gridSize = gridSize + .2 : ''
   for (let i = 0; i < items.length; i++) {
     let itemList = document.createElement('li');
     itemList.innerHTML = items[i];
@@ -29,28 +29,21 @@ function displayItems(gridSize) {
 
 function selectedItem(e) {
   counter = counter + 1;
-  document.getElementById('moves').innerHTML = counter + ' Moves';
-  document.getElementById('total-moves').innerHTML = counter + ' Moves';
-  if (counter > 16 && counter < 29) {
-    finalRating = 2 + ' Stars';
-  } else if (counter > 30) {
-    finalRating = 1 + ' Star';
-  }
-  document.getElementById('rating').innerHTML = finalRating;
-  document.getElementById('final-rating').innerHTML = finalRating;
-  if (document.getElementsByClassName('active').length < 2) { e.classList.add('active'); }
-  for (let i = 0; i < itemsList.length; i++) {
-    itemsList[i].classList.remove('notsame')
-  }
+  counter > 15 && counter < 29 ? finalRating = 2 + ' Stars' : counter > 29 ? finalRating = 1 + ' Star' : '';
+
+  document.getElementById('moves').innerHTML = (counter > 9 ? counter : '0' + counter) + ' Moves';
+  document.getElementById('rating').className = finalRating.replaceAll(' ', '-');
+  document.getElementsByClassName('active').length < 2 ? e.classList.add('active') : ''
+
+  for (let i = 0; i < itemsList.length; i++) { itemsList[i].classList.remove('notsame') }
+
   let previousActiveItem = document.getElementsByClassName('active')[0];
   if (document.getElementsByClassName('active').length === 2) {
     currentActiveItem = document.getElementsByClassName('active')[1]
     if (previousActiveItem.innerText === currentActiveItem.innerText) {
       previousActiveItem.classList.add('selected');
       currentActiveItem.classList.add('selected');
-      for (let i = 0; i < itemsList.length; i++) {
-        itemsList[i].classList.remove('active')
-      }
+      for (let i = 0; i < itemsList.length; i++) { itemsList[i].classList.remove('active') }
     } else {
       previousActiveItem.classList.add('notsame');
       currentActiveItem.classList.add('notsame');
@@ -60,12 +53,16 @@ function selectedItem(e) {
       }
     }
   }
-  if (document.getElementsByClassName('selected').length == 16) {
+  if (document.getElementsByClassName('selected').length === items.length) {
+    document.getElementById('total-moves').innerHTML = counter + ' Moves';
+    document.getElementById('final-rating').className = finalRating.replaceAll(' ', '-');
     successCard()
   }
 }
 
 function successCard() {
-  document.getElementsByClassName("game-controls")[0].style.display, document.getElementById("container").style.display = 'none';
-  document.getElementById("sucess-card").style.display = 'block';
+  setTimeout(function () {
+    document.getElementsByClassName("game-controls")[0].style.display, document.getElementById("container").style.display = 'none'
+    document.getElementById("sucess-card").style.display = 'block';
+  }, 1000)
 }
