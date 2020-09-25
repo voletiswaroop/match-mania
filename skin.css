@@ -106,6 +106,50 @@ li ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  position: relative;
+}
+
+
+#container.shuffle-cards:before {
+  content: '';
+  background: #555;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  opacity: 0.7;
+}
+
+#container.shuffle-cards:after {
+  content: '';
+  animation: spinner-loader 1500ms infinite linear;
+  border-radius: 0.5em;
+  box-shadow: rgba(255, 255, 255, 1)1.5em 0 0 0,
+    rgba(255, 255, 255, 1)1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 1)0 1.5em 0 0,
+    rgba(255, 255, 255, 1)-1.1em 1.1em 0 0,
+    rgba(255, 255, 255, 1)-1.5em 0 0 0,
+    rgba(255, 255, 255, 1)-1.1em -1.1em 0 0,
+    rgba(255, 255, 255, 1)0 -1.5em 0 0,
+    rgba(255, 255, 255, 1)1.1em -1.1em 0 0;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: 48%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spinner-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #rating i,

@@ -1,24 +1,29 @@
 //initializing cards
-let items = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb', 'fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb'],
-  itemsList = document.getElementsByClassName('item'), counter = 0, currentActiveItem, finalRating = 3 + ' Stars';
+let arrayData = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb'],
+  itemsList = document.getElementsByClassName('item'), counter = 0, currentActiveItem, finalRating = 3 + ' Stars', items = [...arrayData, ...arrayData];
 
 //shuffle cards
 function shuffleItems() {
-  window.location.reload();
+  document.getElementById("container").classList.add('shuffle-cards')
+  for (let i = 0; i < itemsList.length; i++) { itemsList[i].className = 'item'; }
+  setTimeout(function () {
+    document.getElementById("container").innerHTML = ''
+    displayItems(4);
+    document.getElementById("container").className = '';
+  }, 1000)
 }
 
 // select number of cards in a row
 displayItems(4);
-
 //Print cards 
 function displayItems(gridSize) {
-  items.sort(function () { return .5 - Math.random(); });
+  shuffledCards = items.sort(function () { return .5 - Math.random(); });
   let itemsContainer = document.getElementById("container");
   gridSize % 2 === 0 ? gridSize = gridSize + .2 : ''
-  for (let i = 0; i < items.length; i++) {
+  for (let i = 0; i < shuffledCards.length; i++) {
     let itemList = document.createElement('li');
-    itemList.innerHTML = items[i];
-    itemList.classList = 'item fa ' + items[i];
+    itemList.innerHTML = shuffledCards[i];
+    itemList.classList = 'item fa ' + shuffledCards[i];
     itemList.style.width = 'calc((100% - ' + gridSize + '%) /' + gridSize + ')';
     itemList.addEventListener('click', function (e) {
       selectedItem(this);
