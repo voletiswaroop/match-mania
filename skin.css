@@ -227,8 +227,11 @@ footer {
 
   .game-wrapper,
   .game-rules {
-    width: 90%;
     margin: auto auto 30px;
-    max-width: clamp(500px, 90%, 650px);
+    width: clamp(80%, 80%, 650px);
+  }
+
+  .item {
+    height: 70px;
   }
 }
