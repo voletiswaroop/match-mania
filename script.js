@@ -67,7 +67,8 @@ function selectedItem(e) {
 
 function successCard() {
   setTimeout(function () {
-    document.getElementsByClassName("game-controls")[0].style.display, document.getElementById("container").style.display = 'none'
+    document.querySelector(".game-controls").style.display = 'none'
+    document.getElementById("container").style.display = 'none'
     document.getElementById("sucess-card").style.display = 'block';
   }, 1000)
 }
